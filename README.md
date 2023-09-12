@@ -19,11 +19,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Sanne 't Hooft (vervangen door jouw naam)
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
-
+  Blauw
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
- 
+  Surface plane 
 </details>
 
 
@@ -39,11 +37,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   [Neopets](https://neopets.com/)
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepage  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="De Huidige homepagina van Neopets.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Pagina 2  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="Pagina twee van de Neopets website.">
  
 </details>
 
