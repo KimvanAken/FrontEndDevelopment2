@@ -52,8 +52,40 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
-  ### Bevindingen
+  ### Test 1: Voice Over Bevindingen:
   Lijst met je bevindingen die in de test naar voren kwamen:
+ - Hij begint met het voorlezen van de header links.
+ - Bij het deel over Friends en Foes loops hij vast. (Ik kan niet makkelijk door alle personage's heen scrollen.)
+ - Omdat sommige objecten worden weergegeven met een link en een plaatje, wordt de link twee kee opgelezen ondanks dat het de link voor hetzelfde is.
+ - Bij het zijwaartse scrolldeel geeft de narrator alleen "link" aan.
+ - De H en D knoppen doen niets bij de homepage. H hoort ervoor te zorgen dat je naar de volgende header kan, en de D hoort naar de volgende "Landmark" of "Container" te gaan, dat gebeurt niet op de pagina.
+  ### Test 2: WCAG Checklist Bevindingen:
+
+  Uittypen van document!!!:
+  
+
+  ### Kleurenblindheid bevindingen:
+  - Blue Cone Monochramacy / Achromatomaly:
+    Geen problemen met het gebruik van de website
+  - Monochramacy / Achromatopsia:
+  sdfsf
+  - Green-Weak / Deuteranamaloy:
+    dfsgdfgfdg
+  - Green-blind / Deuteranopia:
+  sdfsf
+  - Red-weak / Protanomaly:
+    sdfsdf
+  - Red-blind / Protanopia:
+    bdffdgfdg
+  - Blue-weak / Tritanomaly:
+    fsdfdsf
+  - Blue-blind / Tritanopia:
+
+
+
+
+
+
 
 </details>
 
