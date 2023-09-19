@@ -66,15 +66,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Geen fouten.
   - Global code:
   Geen, de enige gevonden error is het volgende:
+   <br> 
     <img src="readme-images/enige-error-html.jpg" width="300px" alt="form field element should have an id or name attribute error">
+     <br> 
   - Keyboard
   Er is een focus stijl, maar die kan iets beter geimplementeerd worden.
   Sommige elementen worden overgeslagen bij keyboard focus.
   Zie bijvoorbeeld de button focus:
+    <br> 
   <img src="readme-images/buttons-focus-state.png" width="300px" alt="Image die de button focus states vergelijkt.">
+   <br> 
   - Mobile and touch
   De scrollbook section op de pagina is een beetje vervormt en erg lang op mobile.
+   <br> 
     <img src="readme-images/scrollbook-section.png" width="300px" alt="Scrollbook section Neopets.com">
+     <br> 
   - Headings
    Geen fouten.
   - Lists:
@@ -89,7 +95,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Appearance:
     Dark mode is niet supported.
     Hoog contrast mode is aanwezig, maar kan beter geimplementeerd worden, zie het volgende:
+     <br> 
     <img src="readme-images/hoogcontrast1.jpg" width="300px" alt="Broodtekst met hoog contrast.">
+     <br> 
      <img src="readme-images/hoogcontrast2.jpg" width="300px" alt="Button see more met hoog contrast">
   - Animation:
     De animaties zijn subtiel, maar dueren zoms erg lang, elementen die "inschuiven" schuiven ook weer langzaam weg als je wegscrollt, misschien beter om te laten staan?
@@ -118,7 +126,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Andere opmerkingen:
   De captcha button zit voor elke elementen. Dit is vooral erg irritant op Mobile.
+    <br> 
     <img src="readme-images/captcha-button.png" width="240px" alt="Voorbeeld captcha button uitschuiven">
+    <br> 
   Sommige secties van de website laden erg sloom. (Bijv de scroll / book section)
 
 
