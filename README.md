@@ -16,7 +16,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Kim van Aken
 
   #### Je startniveau:
   Blauw
@@ -37,11 +37,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   [Neopets](https://neopets.com/)
   #### Screenshot(s) van de eerste pagina (small screen): 
   Homepage  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="De Huidige homepagina van Neopets.">
+  <img src="readme-images/Screenshot_Homepage.png" width="375px" alt="De Huidige homepagina van Neopets.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Pagina 2  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="Pagina twee van de Neopets website.">
+  <img src="readme-images/Screenshot_Page2.png" width="375px" alt="Pagina twee van de Neopets website, Fearie's Hope.">
  
 </details>
 
@@ -60,30 +60,66 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
  - Bij het zijwaartse scrolldeel geeft de narrator alleen "link" aan.
  - De H en D knoppen doen niets bij de homepage. H hoort ervoor te zorgen dat je naar de volgende header kan, en de D hoort naar de volgende "Landmark" of "Container" te gaan, dat gebeurt niet op de pagina.
   ### Test 2: WCAG Checklist Bevindingen:
-
-  Uittypen van document!!!:
+  Gevonden fouten:
   
+  - Content:
+  Geen fouten.
+  - Global code:
+  Geen, de enige gevonden error is het volgende:
+    <img src="readme-images/enige-error-html.jpg" width="300px" alt="form field element should have an id or name attribute error">
+  - Keyboard
+  Er is een focus stijl, maar die kan iets beter geimplementeerd worden.
+  Sommige elementen worden overgeslagen bij keyboard focus.
+  Zie bijvoorbeeld de button focus:
+  <img src="readme-images/buttons-focus-state.png" width="300px" alt="Image die de button focus states vergelijkt.">
+  - Mobile and touch
+  De scrollbook section op de pagina is een beetje vervormt en erg lang op mobile.
+    <img src="readme-images/scrollbook-section.png" width="300px" alt="Scrollbook section Neopets.com">
+  - Headings
+   Geen fouten.
+  - Lists:
+    Geen fouten.
+  - Images:
+    De alt van de images is vaak niet specifiek genoeg. Als er een karakter is die "Walter" heet, is de alt text gewoon "Walter". Mensen die neit kunnen zien weten niet hoe Walter er uitziet.
+  - Media:
+    De carrousels op de pagina kunnen niet op pauze.
+  - Controls:
+  Links die in broodtekst staan kunnen duidelijker worden aangegeven.
+    Buttons zijn a'tjes met een button class, i.p.v. een button.
+  - Appearance:
+    Dark mode is niet supported.
+    Hoog contrast mode is aanwezig, maar kan beter geimplementeerd worden, zie het volgende:
+    <img src="readme-images/hoogcontrast1.jpg" width="300px" alt="Broodtekst met hoog contrast.">
+     <img src="readme-images/hoogcontrast2.jpg" width="300px" alt="Button see more met hoog contrast">
+  - Animation:
+    De animaties zijn subtiel, maar dueren zoms erg lang, elementen die "inschuiven" schuiven ook weer langzaam weg als je wegscrollt, misschien beter om te laten staan?
+  - Color contrast:
+    Geen fouten.
 
   ### Kleurenblindheid bevindingen:
   - Blue Cone Monochramacy / Achromatomaly:
     Geen problemen met het gebruik van de website
   - Monochramacy / Achromatopsia:
-  sdfsf
+  Ook geen problemen, het contrast van de plaatjes en knoppen is goed genoeg om te zien wat er gebeurt. 
   - Green-Weak / Deuteranamaloy:
-    dfsgdfgfdg
+    Geen opmerkingen
   - Green-blind / Deuteranopia:
-  sdfsf
+  Geen opmerkingen
   - Red-weak / Protanomaly:
-    sdfsdf
+   Geen opmerkingen
   - Red-blind / Protanopia:
-    bdffdgfdg
+    Geen opmerkingen
   - Blue-weak / Tritanomaly:
-    fsdfdsf
+    Geen opmerkingen
   - Blue-blind / Tritanopia:
+    Geen opmerkingen.
+  
+  Bij het gebruik van de website heb ik geen momenten gevonden waar kleurenblindheid de effectiviteit van de website tegenhoudt. 
 
-
-
-
+  ### Andere opmerkingen:
+  De captcha button zit voor elke elementen. Dit is vooral erg irritant op Mobile.
+    <img src="readme-images/captcha-button.png" width="240px" alt="Voorbeeld captcha button uitschuiven">
+  Sommige secties van de website laden erg sloom. (Bijv de scroll / book section)
 
 
 
