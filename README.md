@@ -64,6 +64,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
   - Content:
   Geen fouten.
+   <br> 
   - Global code:
   Geen, de enige gevonden error is het volgende:
    <br> 
@@ -82,16 +83,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     <img src="readme-images/scrollbook-section.png" width="300px" alt="Scrollbook section Neopets.com">
      <br> 
   - Headings
-   Geen fouten.
+   Geen fouten.  
+   <br> 
   - Lists:
     Geen fouten.
+     <br> 
   - Images:
     De alt van de images is vaak niet specifiek genoeg. Als er een karakter is die "Walter" heet, is de alt text gewoon "Walter". Mensen die neit kunnen zien weten niet hoe Walter er uitziet.
+     <br> 
   - Media:
     De carrousels op de pagina kunnen niet op pauze.
+     <br> 
   - Controls:
-  Links die in broodtekst staan kunnen duidelijker worden aangegeven.
+    Links die in broodtekst staan kunnen duidelijker worden aangegeven.
     Buttons zijn a'tjes met een button class, i.p.v. een button.
+     <br> 
   - Appearance:
     Dark mode is niet supported.
     Hoog contrast mode is aanwezig, maar kan beter geimplementeerd worden, zie het volgende:
@@ -99,10 +105,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
     <img src="readme-images/hoogcontrast1.jpg" width="300px" alt="Broodtekst met hoog contrast.">
      <br> 
      <img src="readme-images/hoogcontrast2.jpg" width="300px" alt="Button see more met hoog contrast">
+      <br> 
   - Animation:
     De animaties zijn subtiel, maar dueren zoms erg lang, elementen die "inschuiven" schuiven ook weer langzaam weg als je wegscrollt, misschien beter om te laten staan?
+     <br> 
   - Color contrast:
     Geen fouten.
+     <br> 
 
   ### Kleurenblindheid bevindingen:
   - Blue Cone Monochramacy / Achromatomaly:
