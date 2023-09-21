@@ -5,7 +5,13 @@
   box-sizing:border-box;  
 }
 
+body {
+	margin: 0px;
+ }
 
+ li {
+	list-style:none;
+ }
 
 
 
@@ -17,6 +23,8 @@
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--gradient-text: linear-gradient(0.25turn, #8235E9, #632FAC);
+	/* source: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
 
 	/* source: Neopets.com */
 	@font-face {
@@ -155,7 +163,7 @@
 	  }
 	
 	  @font-face {
-	  	font-family: 'Burbank Big Regular';
+	  	font-family: 'BurbankBig';
 		font-style: Bold;
 		font-weight: 700;
 		src: url(/fonts/Burbank-Big-Regular-Bold.ttf) format('ttf');
@@ -168,24 +176,68 @@
 
 
 /****************/
-/* JOUW STYLING */
+/* HEADER EN NAV */
 /****************/
 
-/* jouw code */
-
 header {
-
 	background-color: black;
+	padding:.4em;
+}
+
+header nav section {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center;  maakt de div vreemd?*/ 
 }
 
 header nav section a {
 	text-decoration: none;
 	font-family: 'Montserrat';
 	font-weight: 700;
-	color:#fff
+	color:#000;
+
+
+	background-color:#fff;
+	border-radius: 1em;
+	padding: 1em;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+
 }
 
+header nav section ul:first-of-type a {
+	background: var(--gradient-text);	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* source: https://cssgradient.io/blog/css-gradient-text/ */
+}
+
+/* nav blokje*/ 
+header nav section section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: .1em;
+
+}
+
+header nav section section div {
+	background-color:#fff;
+	width: 3em;
+	height: 5px;
+	border-radius: 1em;
+
+}
+
+
+/*****************/
+/* KOPJES       */
+/***************/
+
 h2 {
-	font-family: 'Burbank Big Regular';
+	font-family: 'BurbankBig';
 	font-weight: 700;
 }
+
+/* werkt niet?*/

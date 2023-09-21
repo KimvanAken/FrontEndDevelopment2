@@ -189,6 +189,7 @@ Ik ben veel van HTML vergeten dus ik weet vaak niet of je dingen in een section 
 |  Hoe maak ik de gekleurde ronde onderkanten bij de sections?|hoe vergroot ik een image binnen een bepaalde box zonder dat die er buiten komt|
 |Hoe loop je een animatie? |
 |Waarvoor mocht je nou precies wel een class voor gebruiken?|
+|Hoe maak ik een dropdown in een nav link menu?|
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
