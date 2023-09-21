@@ -172,18 +172,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Ik ben veel van HTML vergeten dus ik weet vaak niet of je dingen in een section moeten zetten, of bij in een nieuwe section aan de onderkant.
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Leanne         | Chimene           | Martin         
+  | ---            | ---                | ---          |
+  | Hoe maak je een afbeelding van het logo ook een hidden H1 in de HTML? | Hoe kan ik knoppen/afbeeldingen downloaden v.d. website? | Hoe houdt ik een icoon altijd op dezelfde plek in het scherm?  |
+  | Moet er voor de ul een nav?| dit als er tijd is |Hoe krijg ik het lettertype van de website in mijn css?| Hoe zorg ik dat iets verdwijnt als ik scroll?|
+  | Bij H2 "Populair, waar die je de img tag?|Maakt het uit welk formaat afbeelding je gebruikt?| Welke waardes zijn het handigst om te gebruiken als je alles responsive wilt houden?|
+  | Hoe schrijf ik een bepaald stukje in de HTML van de footer?| Meerdere links stijlen in css. Kan dit zonder classes?|
 
+| Kim             | Rosalie        |
+| ---             |---|
+|Hoe maak je een pauze knop voor een carrousel?  |Hoe laat ik een uitklapmenu groeien|
+|  Hoe maak ik de gekleurde ronde onderkanten bij de sections?|hoe vergroot ik een image binnen een bepaalde box zonder dat die er buiten komt|
+|Hoe loop je een animatie? |
+|Waarvoor mocht je nou precies wel een class voor gebruiken?|
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
