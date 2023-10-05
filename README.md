@@ -232,6 +232,8 @@ Ik ben veel van HTML vergeten dus ik weet vaak niet of je dingen in een section 
   - Lettertype toepassen werkt niet bij de  H2 (?)
   - background-size: cover; geeft error aan?
   - Hoe fix ik de nav button
+  - Text shadow krijg ik niet hetzelfde?
+  - Hoe krijg ik de h2 hetzelfde?
 
   Martin:
   - Hoe krijg ik dit icoon helemaal links
