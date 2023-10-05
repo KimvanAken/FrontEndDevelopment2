@@ -211,18 +211,33 @@ Ik ben veel van HTML vergeten dus ik weet vaak niet of je dingen in een section 
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik loop nog erg achter :"D 
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  
+  Leanne:
+  - Hoe connect ik mijn tweede CSS bestand juist aan de HTML?
+  - Hoe laat ik de Nav werken?
+  - Hoe importeer ik het juiste lettertype?
+  - Hoe verwijder je iets op GitHub?
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Chimène:
+  - hoe krijg ik twee a’tjes naast elkaar als button
+  - bij een section werkt flex niet
+  - hoe moet ik column toepassen op een bepaalde section
+  - menu knop snap ik niet hoe die werkt
 
+  Kim:
+  - Lettertype toepassen werkt niet bij de  H2 (?)
+  - background-size: cover; geeft error aan?
+  - Hoe fix ik de nav button
+
+  Martin:
+  - Hoe krijg ik dit icoon helemaal links
+  -Hoe maak ik dit carousel
+  - Hoe is dit handig om te maken met grid.
+  - Moeten alle buttons naar iets leiden?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

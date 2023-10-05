@@ -1,29 +1,30 @@
-<!doctype html>
-<html lang="nl">
+<!DOCTYPE html>
+<html lang="en">
 	
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Kim">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Neopets</title>
+	<title>Neopets Homepage</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-<header>
-	<nav>
+<body>
+	<header>
 		<section>
 			<a href="#"><img type="image/svg+xml" src="images/logo.svg" alt="Neopets logo"></a>
-			<section>
-				<!-- Div's voor het hamburger menu-->
-				<div></div>
-				<div></div>
-				<div></div>
-			</section>
+			<button>
+				<!-- spans voor het hamburger menu-->
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</section>
 
-		<section>
+		<nav>
+			<h2>Navigation</h2> <!--- moet nog ontzichtbaar worden :)-->
 			<ul>
 				<li>
 					<a href="#">Play Neopets</a>
@@ -37,10 +38,6 @@
 				<li>
 					<a href="#">World of Neopets</a>
 				</li>
-			</ul>
-		</section>
-		<section>
-			<ul>
 				<li>
 					<a href="#">Merchandise</a>
 				</li>
@@ -50,12 +47,9 @@
 				<li>
 					<a href="#">About</a>
 				</li>
-				<!-- hoe maak ik hier een dropdown van?-->
 			</ul>
-		</section>
-	</nav>
-	<section>
-		<h2>Follow Us On</h2>
+
+			<h2>Follow Us On</h2>
 		<ul>
 			<li><a href="#"><img src="images/icon-fb-2.svg" alt="Facebook Icon"></a></li>
 			<li><a href="#"><img src="images/icon-tw-2.svg" alt="Twitter Icon"></a></li>
@@ -63,14 +57,15 @@
 			<li><a href="#"><img src="images/icon-tt-2.svg" alt="TikTok Icon"></a></li>
 
 		</ul>
-	</section>
-</header>
-<body>
+	</nav>
+	</header>
+<main>
+	<h1>The Neopets Homepage</h1>
 	<section>
 		<ul>
 			<li>
 				<h2>Welcome to Neopets!</h2>
-				<p>Greetings, Neopians, and welcome to Neopets, the original online virtual pet community! Check out all the awesome fgeatures that Neopia has to offer!</p>
+				<p>Greetings, Neopians, and welcome to Neopets, the original online virtual pet community! Check out all the awesome features that Neopia has to offer!</p>
 				<a href="#">See More</a>
 			</li>
 			<li>
@@ -105,7 +100,7 @@
 		</ul>
 		<button></button>
 	</section>
-	<Section>
+	<section>
 		<img src="placeholder" alt="">
 		<h2>Top News</h2>
 		<p>Stay informed and up-to-date with our latest news, bringing you the latest updates, announcements, and stories that matter.</p>
@@ -134,8 +129,8 @@
 		<p>Welcome to a world of heroes, villains, and everything in between...</p>
 	</section>
 
-	
-	<script defer src="scripts/script.js"></script>
+</main>
+<script defer src="scripts/script.js"></script>
 </body>
 	
 </html>

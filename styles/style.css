@@ -21,9 +21,13 @@ body {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-black:#111;
+	--color-white:#eee;
 	--gradient-text: linear-gradient(0.25turn, #8235E9, #632FAC);
+	--gradient-orange-button: linear-gradient(360deg,#ff7c00 0%,#ffca00 100%);
+	--gradient-button-hover: linear-gradient(180deg,#8235e9 0%,#4b2b7f 100%);
+
+
 	/* source: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
 
 	/* source: Neopets.com */
@@ -171,10 +175,6 @@ body {
 		}
 }	
 
-
-
-
-
 /****************/
 /* HEADER EN NAV */
 /****************/
@@ -184,13 +184,13 @@ header {
 	padding:.4em;
 }
 
-header nav section {
+header  nav {
 	display: flex;
 	justify-content: space-between;
 	/* align-items: center;  maakt de div vreemd?*/ 
 }
 
-header nav section a {
+header nav ul li a {
 	text-decoration: none;
 	font-family: 'Montserrat';
 	font-weight: 700;
@@ -206,23 +206,23 @@ header nav section a {
 
 }
 
-header nav section ul:first-of-type a {
+header nav ul:first-of-type a {
 	background: var(--gradient-text);	
-	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	/* source: https://cssgradient.io/blog/css-gradient-text/ */
 }
 
 /* nav blokje*/ 
-header nav section section {
+header section button {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	gap: .1em;
+	gap: 1em;
 
 }
 
-header nav section section div {
+header section button span {
 	background-color:#fff;
 	width: 3em;
 	height: 5px;
@@ -238,6 +238,55 @@ header nav section section div {
 h2 {
 	font-family: 'BurbankBig';
 	font-weight: 700;
+	font-style: Bold;
 }
 
 /* werkt niet?*/
+
+
+
+main section:first-of-type ul li {
+
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(/images/bg-01-mobile.png);
+	background-repeat: no-repeat
+	background-size: cover;
+	/* credit: https://w3schools.com/cssref/pr_background-image.php */
+	font-family: 'Montserrat';
+}
+
+main section:first-of-type ul li p {
+	color:var(--color-white)
+	filter: drop-shadow(5px 5px 19px rgba(0, 0, 0, 0.41));
+	/* credit: https://webcode.tools/generators/css/drop-shadow */
+
+}
+
+/*******************/
+/* Oranje Buttons */
+/*****************/
+main section:first-of-type ul li a {
+	background-image: var(--gradient-orange-button);
+	color: var(--color-white);	
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: capitalize;
+	text-align: center;
+
+
+	padding: 1rem 2.5rem;
+	border-color: var(--color-white);
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 999px;
+}
+
+main section:first-of-type ul li a:hover {
+	background-image: var(--gradient-button-hover);
+}
