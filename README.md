@@ -270,17 +270,38 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Wat goed ging: voortgang met CSS
+waar ik nog tegen op kijk maar nog niet heb geprobeerd: Javascript
+dit heb ik bijvoorbeeld nodig voor de carrousel, en om animaties te krijgen bij het inladen van sections.
 
 ### Agenda voor meeting
 
-samen met je groepje opstellen
+**Leanne:**
 
-| student 1      | student 2          | student 3    | student 4        |
-| -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+- Het juiste lettertype werkt niet
+- Hoe doe je de zoekbalk in de header een rij naar onder
+- Hoe zet ik de H2 en A (Tickets) op de goede positie
+- Hoe verander ik volgorde van afbeelding + plaatje? Met flex? Bij “Uitgelicht”
+- Het paarse lijntje onder “Recent bekeken” en “Populair” hoe kan ik dat het beste doen?
+- Hoe kan ik het beste het zwarte randje in de header maken? Met <p>?
+
+**Chimène:**
+Chimène is vandaag niet aanwezig, maar ik heb alsnog haar vragen opgeschreven:
+
+- meer uitleg over @media Queries.
+- wil een border om mijn element, maar ik krijg het niet voor elkaar.
+- Jusitify conent lijkt niet te werken
+- Hoe krijg ik een afbeelding links en tekst rechts met flex?
+
+**Kim:**
+
+- Hoe fix ik de padding bij de icoontjes in de NAV?
+- Hoe voeg ik een to top button toe
+- Hoe zat het ook en weer met de 2e pagina en de stylesheets?
+- -webkit-background-clip: text; geeft een error, is dat OK?
+- Waar kan ik het beste terecht als ik hierna tegen problemen oploop met Javascript?
+
+**Martin:**
 
 ### Verslag van meeting
 
