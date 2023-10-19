@@ -303,6 +303,10 @@ Chimène is vandaag niet aanwezig, maar ik heb alsnog haar vragen opgeschreven:
 
 **Martin:**
 
+- Hoe zorg ik ervoor dat de nav bar blijft staan
+- Mag ik hier classes gebruiken?
+- Gebruik van pixels
+
 ### Verslag van meeting
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
