@@ -270,6 +270,11 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
 ### Stand van zaken
 
+Website screenshot:
+
+<details>
+<summary> <img src="readme-images/voortgang3.png" width="240px" alt="Voorbeeld captcha button uitschuiven"></summary>
+
 Wat goed ging: voortgang met CSS
 waar ik nog tegen op kijk maar nog niet heb geprobeerd: Javascript
 dit heb ik bijvoorbeeld nodig voor de carrousel, en om animaties te krijgen bij het inladen van sections.
