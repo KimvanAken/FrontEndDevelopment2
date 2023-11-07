@@ -1,0 +1,370 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* source: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
+/* source: Neopets.com */
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "BurbankBig";
+  font-style: Bold;
+  font-weight: 700;
+  src: url(../fonts/Burbank-Big-Regular-Bold.ttf) format("truetype");
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* kleuren */
+  --footer-black: #111;
+  --footer-white: #fff;
+  --footer-link-grey: #8f8f8f;
+  --footer-1px-line: #313131;
+  --gradient-email-form: linear-gradient(180deg, #fdcb46 0%, #fc7e23 100%);
+}
+
+/******************/
+/*  F O O T E R  */
+/****************/
+
+footer {
+  background-color: var(--footer-black);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+footer h2 {
+  position: relative;
+  font-family: "BurbankBig";
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--footer-white);
+  padding-top: 2rem;
+}
+
+footer h2::after {
+  content: "";
+
+  position: absolute;
+  top: -1rem;
+  right: 3rem;
+
+  display: block;
+
+  width: 150px;
+  aspect-ratio: 1;
+
+  background-image: url("../images/title-stars.svg");
+  background-size: cover;
+  /*source/credit: https://codepen.io/shooft/pen/GRPbwPO (van Sanne)  */
+}
+
+footer h3 {
+  font-family: "BurbankBig";
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--footer-white);
+}
+
+footer p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  color: var(--footer-white);
+}
+
+footer a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+
+  text-decoration: none;
+  color: var(--footer-link-grey);
+}
+
+/******************/
+/*   SECTIONS    */
+/****************/
+
+/******************/
+/*   SECTION 1    */
+/****************/
+
+footer > section:first-of-type {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  border-bottom: solid 1px var(--footer-1px-line);
+}
+
+/*tekst onder email form anders, laatste 2 p's*/
+footer > section:first-of-type p:nth-of-type(2),
+footer > section:first-of-type p:nth-of-type(3) {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--footer-link-grey);
+  line-height: 1.2rem;
+}
+/*links in die p's dikgedrukt*/
+footer > section:first-of-type p:nth-of-type(2) a,
+footer > section:first-of-type p:nth-of-type(3) a {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/*   email form   */
+footer form {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+
+  border-style: solid;
+  border-image: var(--gradient-email-form);
+  border-width: 0.5rem;
+  border-radius: 9999px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+footer input[type="email"] {
+  font-size: 1rem;
+  color: var(--footer-white);
+
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+/* focus rework */
+
+/* weghalen:*/
+footer input[type="email"]:focus {
+  outline: none;
+}
+/* er weer bijdoen*/
+
+footer form:focus {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  padding: 1em;
+
+  border-style: solid;
+  border-image: var(--gradient-email-form);
+  border-width: 0.5rem;
+  border-radius: 9999px;
+
+  /* source/credit voor de gradient border: */
+}
+
+/*   border etc  */
+
+footer input[type="submit"] {
+  background-color: #fdcb46;
+}
+
+/******************/
+/*   SECTION 2  */
+/****************/
+
+footer > section:nth-of-type(2) {
+  padding-bottom: 1.75rem;
+  padding-top: 3rem;
+  border-bottom: solid 1px var(--footer-1px-line);
+}
+
+/* neopets logo footer */
+footer section:nth-of-type(2) section:first-of-type img {
+  display: block;
+  width: 274px;
+
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* lists, de parent voor de grid*/
+/*direct child selector anders krijgt de section eronder ook een grid*/
+footer > section:nth-of-type(2) > section:nth-of-type(2) {
+  display: grid;
+  gap: 1.25rem;
+
+  grid-template-columns: repeat(
+    2,
+    /* 2 keer wat hierna komt herhalen */
+      minmax(
+        0,
+        /* minumum van de colums is 0*/ 1fr
+          /* Maximum column is fr 1 (evenveel ruimte vullen) */
+      )
+  ); /*credit/: neopets site*/
+  text-align: center;
+}
+
+/* de grid voor de knopjes*/
+footer > section:nth-of-type(2) section:nth-of-type(2) section:last-of-type ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.625rem;
+}
+
+/* socials knopjes*/
+footer > section:nth-of-type(2) section:nth-of-type(2) ul:last-of-type img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient-socials-navbuttons);
+  padding: 0.7rem;
+  border-radius: 50%;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  margin: auto;
+
+  /* source/credit: Sanne) */
+}
+
+/*de links*/
+footer > section:nth-of-type(2) ul li a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+/******************/
+/*   SECTION 3  */
+/****************/
+footer > section:nth-of-type(3) {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > section:nth-of-type(3) p,
+footer > section:nth-of-type(3) a {
+  margin: 0;
+  color: var(--footer-link-grey);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}

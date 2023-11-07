@@ -8,9 +8,14 @@
     <title>Neopets Homepage</title>
 
     <link href="styles/style.css" rel="stylesheet" />
+    <link href="styles/footerstyle.css" rel="stylesheet" />
+
     <link rel="icon" type="image/svg+xml" href="images/favicon.ico" />
   </head>
+
   <body>
+    <!--- H E A D E R -->
+
     <header>
       <section>
         <a href="#"
@@ -25,8 +30,8 @@
       </section>
 
       <nav>
-        <h2>Navigation</h2>
-        <!--- moet nog ontzichtbaar worden :)-->
+        <h2 class="visually-hidden">Navigation</h2>
+        <!--- class is voor ontzichtbaar maar niet voor de screenreader!-->
         <ul>
           <li>
             <a href="#">Play Neopets</a>
@@ -74,8 +79,11 @@
         </ul>
       </nav>
     </header>
+
+    <!--- M A I N -->
+
     <main>
-      <h1>The Neopets Homepage</h1>
+      <h1 class="visually-hidden">The Neopets Homepage</h1>
       <section>
         <ul>
           <li>
@@ -105,16 +113,26 @@
           <li>
             <img src="images/left-logo-4.png" alt="" />
             <h2>Available on</h2>
-            <img src="images/appstore.png" alt="" />
-            <img src="images/googleplay.png" alt="" />
+            <section>
+              <img
+                src="images/appstore.png"
+                alt="Download on the Apple App store"
+              />
+              <img src="images/googleplay.png" alt="Get it on google play" />
+            </section>
             <img src="images/right-image-4.png" alt="" />
           </li>
 
           <li>
             <img src="images/left-logo-3.png" alt="" />
             <h2>Available on</h2>
-            <img src="images/appstore.png" alt="" />
-            <img src="images/googleplay.png" alt="" />
+            <section>
+              <img
+                src="images/appstore.png"
+                alt="Download on the Apple App store"
+              />
+              <img src="images/googleplay.png" alt="Get it on google play" />
+            </section>
             <img src="images/right-image-3.png" alt="" />
           </li>
 
@@ -127,7 +145,15 @@
           <section></section>
         </ul>
       </section>
+
       <section>
+        <section>
+          <img
+            src="images/bg-cloud-3.svg"
+            alt="a strip of yellow clouds, moving to the left."
+          />
+        </section>
+
         <h2>Latest Events</h2>
         <p>
           Immerse yourself in the enchanting world of Neopia with our latest
@@ -135,32 +161,34 @@
           the Neopian fun!
         </p>
 
-        <button>
-          <img src="images/arrow_left_purple.svg" alt="Button to left" />
-        </button>
+        <section id="carrouselNummer2" class="carroCarrousel" tabIndex="-1">
+          <ul>
+            <li id="element1">
+              <a href="#"
+                ><img src="images/exclusive_hood_giveaway.jpeg" alt=""
+              /></a>
+            </li>
+            <li id="element2">
+              <a href="#"
+                ><img src="/images/sdcc_banner_546b488fec.png" alt=""
+              /></a>
+            </li>
+            <li id="element3">
+              <a href="#"
+                ><img src="/images/fallrenaissance_2_3bdbbe2e30.png" alt=""
+              /></a>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="images/exclusive_hood_giveaway.jpeg" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="/images/sdcc_banner_546b488fec.png" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="/images/fallrenaissance_2_3bdbbe2e30.png" alt=""
-            /></a>
-          </li>
-        </ul>
-
-        <button>
-          <img src="images/arrow_right_purple.svg" alt="Button to right" />
-        </button>
+          <button aria-label="To the left side of the element">
+            <img src="images/arrow_left_purple.svg" alt="Button to left" />
+          </button>
+          <button aria-label="To the right side of the element">
+            <img src="images/arrow_right_purple.svg" alt="Button to right" />
+          </button>
+        </section>
       </section>
+
       <section>
         <img src="placeholder" alt="" />
         <h2>Top News</h2>
@@ -171,23 +199,38 @@
 
         <section>
           <h3>All Treats, No Tricks, Neopets October Update</h3>
-          <h4>Neopets</h4>
-          <time datetime="2023-10-09">Oct 9, 2023</time>
-          <img src="#" alt="All treats, no tricks!" />
+          <section>
+            <h4>Neopets</h4>
+            <time datetime="2023-10-09">Oct 9, 2023</time>
+          </section>
+          <img
+            src="images/newsletterocto23_alltricks_notreats.png"
+            alt="All treats, no tricks!"
+          />
         </section>
 
         <section>
           <h3>Neopets September Update</h3>
-          <h4>News</h4>
-          <time datetime="2023-09-21">Sep 11, 2023</time>
-          <img src="#" alt="Neopets September Update" />
+          <section>
+            <h4>News</h4>
+            <time datetime="2023-09-21">Sep 11, 2023</time>
+          </section>
+          <img
+            src="/images/septemberupdate.png"
+            alt="Neopets September Update"
+          />
         </section>
 
         <section>
           <h3>A Flash from the Past: Ruffle Resurrects Neopets Minigames</h3>
-          <h4>News</h4>
-          <time datetime="2023-09-06">Sep 6, 2023</time>
-          <img src="#" alt="Flash games are back!" />
+          <section>
+            <h4>News</h4>
+            <time datetime="2023-09-06">Sep 6, 2023</time>
+          </section>
+          <img
+            src="images/flashgames_areback.jpeg"
+            alt="Flash games are back!"
+          />
         </section>
 
         <a href="#">See More</a>
@@ -206,34 +249,293 @@
         </ul>
 
         <ul>
-          <img src="images/Faeries-Fyora.png" alt="" />
-          <img src="images/Heros-Jake.png" alt="" />
-          <img src="images/Villains-Dr_Sloth.png" alt="" />
-          <img src="images/Faeries-Naia.png" alt="" />
-          <img src="images/Heros_Jeran.png" alt="" />
-          <img src="images/Heros-Hannah.png" alt="" />
-          <img src="images/Faeries-Illusen.png" alt="" />
-          <img src="images/Heros_Altador.png" alt="" />
-          <img src="images/Villains-Captain_Scarblade.png" alt="" />
-          <img src="images/Faeries-Mira.png" alt="" />
-          <img src="images/Villains-Xandra.png" alt="" />
-          <img src="images/Heros_Roberta.png" alt="" />
-          <img src="images/Villains-The_Darkest_Faerie.png" alt="" />
-          <img src="images/Faeries-Jhudora.png" alt="" />
-          <img src="images/Villains-Hubrid_Nox-2.png" alt="" />
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Faeries-Fyora.png"
+              alt="A purple fairy woman, looking confident while holding a staff. Her name is Fyora."
+            />
+          </li>
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Heros-Jake.png"
+              alt="A blue Kougra (tiger) wearing adventurer gear, swinging on a vine towards you. His name is Jake."
+            />
+          </li>
+          <li>
+            <img
+              id="villainBlock"
+              src="images/Villains-Dr_Sloth.png"
+              alt="Angry looking evil creature that's wearing a Dark Vampire-ish cloak. His name is Dr. Sloth."
+            />
+          </li>
+          <li>
+            <img
+              id="faerieBlock"
+              src="images/Faeries-Naia.png"
+              alt="A smiling blue faerie. She has long blond hair and scales on her blue suit. She has water motifs. Her name is Naia."
+            />
+          </li>
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Heros_Jeran.png"
+              alt="A blue wolf dressedm in gladiator armor. He's holding a sword and shield. His name is Jeran."
+            />
+          </li>
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Heros-Hannah.png"
+              alt="A yellow rabbit in a dress. She's holding a rope. Her name is Hannah."
+            />
+          </li>
+          <li>
+            <img
+              id="faerieBlock"
+              src="images/Faeries-Illusen.png"
+              alt="A green fearie with brown and green hair. She's smiling and holding out her hand. Her name is Illusen"
+            />
+          </li>
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Heros_Altador.png"
+              alt="A grey Lupo in Gladiator armor, but fancier than the one from before. He has a stern look to him. His name is Altador"
+            />
+          </li>
+          <li>
+            <img
+              id="villainBlock"
+              src="images/Villains-Captain_Scarblade.png"
+              alt="A green and blue Lupo pirate double wielding swords. His clothing looks ragged and he has a scar. His name is Captain Scarblade."
+            />
+          </li>
+          <li>
+            <img
+              id="faerieBlock"
+              src="images/Faeries-Mira.png"
+              alt="A blue space faerie looking at a flowing light between her hands. She has tights on with a star pattern on it. Her name is Mira."
+            />
+          </li>
+          <li>
+            <img
+              id="villainBlock"
+              src="images/Villains-Xandra.png"
+              alt="An evil-looking woman with a mysterious purple aura emitting from her. She looks angry. Her name is Xandra."
+            />
+          </li>
+          <li>
+            <img
+              id="heroBlock"
+              src="images/Heros_Roberta.png"
+              alt="A blue Acara. She's wearing green medieval clothes, and holding a stick. Her name is Roberta."
+            />
+          </li>
+          <li>
+            <img
+              id="villainBlock"
+              src="images/Villains-The_Darkest_Faerie.png"
+              alt="A sassy looking fearie. Her skin is light purple and her hair is dark blue. She's got both of her hands on her hips. She has two big red bat wings. Her name is The darkest Faerie."
+            />
+          </li>
+          <li>
+            <img
+              id="faerieBlock"
+              src="images/Faeries-Jhudora.png"
+              alt="A purple fearie. He has big fierce eyebrows and green lipstick. She's holding a green fire orb. Her name is Jhudora."
+            />
+          </li>
+          <li>
+            <img
+              id="villainBlock"
+              src="images/Villains-Hubrid_Nox-2.png"
+              alt="A purple chia screaming at a green orb. He's wearing a sharp looking cape. His name is Hubrid Nox."
+            />
+          </li>
         </ul>
         <a href="#">Explore Neopia</a>
       </section>
 
       <section>
-        <h2>Timeline</h2>
+        <h2>Merch</h2>
         <p>
-          Take a glimpse into our journey with a captivating timeline showcasing
-          our milestones and achievements, from humble beginnings to exciting
-          future endeavors.
+          Explore our Neopets-inspired merch line, featuring a delightful range
+          of products that capture the magic of the virtual world and show off
+          your Neopets love with our exclusive designs.
         </p>
+
+        <section>
+          <article>
+            <img
+              src="images/01.png"
+              alt="Image of the Neopets unofficial cookbook, with a happy fairy on the front"
+            />
+            <h3>Neopets: The Official Cookbook</h3>
+            <p>$22.49</p>
+          </article>
+
+          <article>
+            <img
+              src="images/02.png"
+              alt="A pastel purple purse with a a pattern of different faires on there"
+            />
+            <h3>Neopets Fairy Doll Wallet</h3>
+            <p>$39.95</p>
+          </article>
+
+          <article>
+            <img
+              src="images/03.png"
+              alt="A yellow phone case with a pattern of different neopets on there"
+            />
+            <h3>Neopets Pet Medley Tough Phone Case</h3>
+            <p>$34.95</p>
+          </article>
+
+          <article>
+            <img
+              src="images/04.png"
+              alt="Three different tarot cards from neopets, displayed next to eachother"
+            />
+            <h3>Neopets - Tarot and Oracle Deck Set (Officially Licensed)</h3>
+            <p>$55.95</p>
+          </article>
+        </section>
+
+        <a href="#">See More</a>
       </section>
     </main>
+
+    <!--- F O O T E R -->
+
+    <footer>
+      <section>
+        <h2>Join Our Newsletter</h2>
+        <p>
+          Sign up now and get a sneak peak into the latest gaming news,
+          exclusive offers, and a whole lot of fun delivered straight on to your
+          virtual doorstep!
+        </p>
+
+        <form>
+          <label></label>
+          <input type="email" placeholder="Enter Email Adress" />
+          <input type="submit" value="➔" />
+        </form>
+
+        <p>
+          You agree that your email address will be handled according to our
+          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+        </p>
+        <p>
+          You may unsubscribe anytime by clicking “unsubscribe” in the
+          newsletter.
+        </p>
+      </section>
+
+      <section>
+        <section>
+          <img src="images/footer-logo.svg" alt="Neopets logo in white" />
+        </section>
+
+        <!--- de sections hier staan in een section omdat ik anders geen manier weet om de h3's bij de lists te houden. -->
+        <section>
+          <section>
+            <h3>Game</h3>
+            <ul>
+              <li>
+                <a href="#">Neopets</a>
+              </li>
+              <li>
+                <a href="#">World of Neopets</a>
+              </li>
+              <li>
+                <a href="#">Faerie's Hope</a>
+              </li>
+              <li>
+                <a href="#">Island Builders</a>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>About Us</h3>
+            <ul>
+              <li>
+                <a href="#">Our Team</a>
+              </li>
+              <li>
+                <a href="#">Brand Ambassador</a>
+              </li>
+              <li>
+                <a href="#">About Neopets</a>
+              </li>
+              <li>
+                <a href="#">Explore Neopia</a>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Others</h3>
+            <ul>
+              <li>
+                <a href="#">News and Updates</a>
+              </li>
+              <li>
+                <a href="#">Merchandise</a>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Follow Us On</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="images/icon-fb-2.svg" alt="Facebook Icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/icon-tw-2.svg" alt="Twitter Icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/icon-ig-2.svg" alt="Instagram Icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/icon-tt-2.svg" alt="TikTok Icon"
+                /></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+
+      <section>
+        <!--- de sections hier staan in een section voor styling -->
+        <section>
+          <p>© 1999-2023 Neopets. All Rights Reserved.</p>
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </section>
+        <section>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookies & Privacy Policy</a></li>
+          </ul>
+        </section>
+      </section>
+    </footer>
+
     <script defer src="scripts/script.js"></script>
   </body>
 </html>

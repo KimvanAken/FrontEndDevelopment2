@@ -300,7 +300,7 @@ Chimène is vandaag niet aanwezig, maar ik heb alsnog haar vragen opgeschreven:
 **Kim:**
 
 - Hoe fix ik de padding bij de icoontjes in de NAV?
-- Hoe voeg ik een to top button toe
+- Hoe voeg ik een back to top button toe
 - Hoe zat het ook en weer met de 2e pagina en de stylesheets?
 - -webkit-background-clip: text; geeft een error, is dat OK?
 - Waar kan ik het beste terecht als ik hierna tegen problemen oploop met Javascript?
@@ -313,12 +313,29 @@ Chimène is vandaag niet aanwezig, maar ik heb alsnog haar vragen opgeschreven:
 
 ### Verslag van meeting
 
-hier na afloop snel de uitkomsten van de meeting vastleggen
+uitkomsten van de meeting:
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+Mijn vragen + antwoorden
+**- Hoe fix ik de padding bij de icoontjes in de NAV?**
+Gefixt met hulp van Sanne
+
+**- Hoe voeg ik een back to top button toe**
+Behandelt samen, code hier: https://codepen.io/shooft/pen/xxMKwob
+De scroll-behaviour: smooth is handig alleen voor wanneer mensen animaties aanhebben.
+
+**- Hoe zat het ook en weer met de 2e pagina en de stylesheets?**
+1 algemene styling: header + footer
+1 voor main pagina 1
+1 voor main pagina 2
+
+**- -webkit-background-clip: text; geeft een error, is dat OK?**
+Het moet eigenlijk zo:
+-webkit-background-clip: text; >chromium
+background-clip: text; (is voor firefox)
+color: transparent;
+
+**- Waar kan ik het beste terecht als ik hierna tegen problemen oploop met Javascript?**
+Bij Luuk Brauckmann of Quinesha van Burgh! (s)
 
 </details>
 
@@ -329,7 +346,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/screenshot-hele-pagina-voortgang-eingoplevering.png" width="375px" alt="uitkomst opdracht 1">
 
 ### Dit ging goed/Heb ik geleerd:
 
@@ -339,7 +356,7 @@ Korte omschrijving met plaatjes
 
 ### Dit was lastig/Is niet gelukt:
 
-Korte omschrijving met plaatjes
+Javascript! Ik heb geprobeerd bepaalde elementen te implementeren zoals de carroussel. Ik heb geprobeerd de code aan te passen omdat ik bijvoorbeeld buttons gebruik i.p.v. links, maar zelfs met de hulp van chatGPT die mij probeerde uit te leggen wat de problemen konden zijn lukte het niet.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
@@ -353,8 +370,20 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 Nb. ChatGpT en andere AI horen er ook bij.
 Nb. Vermeld de bronnen ook in je code.
 
-1. bron 1
-2. bron 2
-3. ...
+1. Linear-gradient: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+2. .visually-hidden class en implementatie: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/
+3. nth-of-type(-n + 4 ) selector: https://stackoverflow.com/questions/18672625/how-to-select-first-2-li-elements-using-css
+4. Social media buttons in nav en footer source: Met Sanne in de les
+5. Font-border source voor letter effect: https://stackoverflow.com/questions/2570972/css-font-border
+6. gradient tekst: https://cssgradient.io/blog/css-gradient-text/
+7. border-radius in niet-pixels: https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em*/
+8. gradient-background-image: https://w3schools.com/cssref/pr_background-image.php
+9. Bewegende cloud banner in section 2: Vriend die Todd heet
+10. Mislukte carrousel (door mij): Van Sanne https://codepen.io/shooft/pen/mdBOZLz
+11. button styling weghalen: https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit
+12. flex-items niet te lang maken: https://stackoverflow.com/questions/33887051/prevent-flex-items-from-stretching
+13. Tekst van button op 1 line houden ipv 2: https://stackoverflow.com/questions/5232310/how-can-i-force-div-contents-to-stay-in-one-line-with-html-and-css
+14. grid-row: span 2: https://stackoverflow.com/questions/53199146/make-element-take-two-columns*
+15. Image als achtergrond bij section 1: https://w3schools.com/cssref/pr_background-image.php
 
-</details>
+ </details>
