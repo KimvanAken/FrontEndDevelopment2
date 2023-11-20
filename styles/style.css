@@ -18,6 +18,15 @@ p {
   font-weight: 400;
 }
 
+body.open {
+  overflow: hidden;
+}
+
+/*niet scrollen wanneer menu rechts open :)*/
+html.menuOpen {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -208,23 +217,6 @@ header > section {
   align-items: center;
 }
 
-/*parent van de span button*/
-header > section button {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: var(--color-black);
-  border: none;
-}
-
-/* span button lijntjes zelf*/
-header > section button span {
-  width: 2.4rem;
-  height: 0.3rem;
-  display: block;
-  background-color: var(--color-white);
-  border-radius: 9999px;
-}
 /*nav link lijst*/
 header nav ul:first-of-type {
   text-decoration: none;
@@ -293,6 +285,90 @@ header nav h2 {
   color: var(--color-white);
 }
 
+/****************************/
+/* knopje hamburger menu inklappen/   
+ credit: https://codepen.io/shooft/pen/dymRMBZ */
+
+header > section button {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-black);
+  border: none;
+  transition-duration: 0.5s;
+}
+
+/* span button lijntjes zelf*/
+header > section button span {
+  width: 2.4rem;
+  height: 0.3rem;
+  display: block;
+  background-color: var(--color-white);
+  border-radius: 9999px;
+}
+/*padding rechts voor wanneer de scrollbar verdwijnt*/
+header > button.open {
+  padding-right: 2em;
+  padding-left: 2em;
+  background-color: var(--color-black);
+}
+
+/*span 1 dicht*/
+header > button span:nth-of-type(1) {
+  transform: translateY(-0.4em);
+}
+
+/*span 2 staat al goed*/
+
+/*span 3 dicht */
+header > button span:nth-of-type(3) {
+  transform: translateY(0.4em);
+}
+
+/*************/
+/*span 1 open*/
+/***********/
+header > button.menuOpen span:nth-of-type(1) {
+  transform: rotate(45deg) scalex(1.25);
+  filter: invert(100%);
+}
+
+/*span 2 open*/
+header > button.menuOpen span:nth-of-type(2) {
+  opacity: 0;
+}
+
+/*span 3 open*/
+header > button.menuOpen span:nth-of-type(3) {
+  transform: rotate(-45deg) scalex(1.25);
+  filter: invert(100%);
+}
+
+/********************/
+/* uitschuif menu  */
+/******************/
+
+/* wanneer hij closed is*/
+
+header > nav {
+  font-size: 1.1em;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  inset: 5em 0 0 0; /* zorgt ervoor dat het boven de pagina staat*/
+  background-color: var(--color-black);
+  transition: 0.1s;
+  z-index: 100000;
+
+  transform: translateX(100%);
+  transition: transform 0.3s; /* zodat het geen gekke animatie op andere dingen doet*/
+}
+
+/*wanneer hij open is*/
+header > nav.open {
+  transform: translateX(0%);
+}
+
 /*****************/
 /* KOPJES       */
 /***************/
@@ -336,7 +412,7 @@ main > section:first-of-type > ul li img {
 /*      carrousel item 1    */
 /***************************/
 main > section:first-of-type ul li:first-of-type {
-  background-image: url(/images/bg-01-mobile.png);
+  background-image: url("../images/bg-01-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -348,7 +424,7 @@ main > section:first-of-type ul li:first-of-type {
 /*      carrousel item 2    */
 /***************************/
 main > section:first-of-type ul li:nth-of-type(2) {
-  background-image: url(/images/bg-02-mobile.png);
+  background-image: url("../images/bg-02-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -367,7 +443,7 @@ main > section:first-of-type ul li:nth-of-type(2) a:first-of-type {
 /*      carrousel item 3    */
 /***************************/
 main > section:first-of-type ul li:nth-of-type(3) {
-  background-image: url(/images/bg-04-mobile.png);
+  background-image: url("../images/bg-04-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -375,7 +451,6 @@ main > section:first-of-type ul li:nth-of-type(3) {
 }
 
 main > section:first-of-type ul li:nth-of-type(3) img:first-of-type {
-  padding-top: 3rem;
   padding-bottom: 0;
   margin-bottom: 3rem;
 }
@@ -383,7 +458,7 @@ main > section:first-of-type ul li:nth-of-type(3) img:first-of-type {
 /*      carrousel item 4    */
 /***************************/
 main > section:first-of-type ul li:nth-of-type(4) {
-  background-image: url(/images/bg-03-mobile.png);
+  background-image: url("../images/bg-03-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -393,7 +468,7 @@ main > section:first-of-type ul li:nth-of-type(4) {
 /*      carrousel item 5    */
 /***************************/
 main > section:first-of-type ul li:nth-of-type(5) {
-  background-image: url(/images/bg-05-mobile.png);
+  background-image: url("../images/bg-05-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -408,10 +483,7 @@ main > section:first-of-type ul > li > section {
   gap: 0.625rem;
 
   justify-items: center;
-  align-items: center;
   height: 4rem;
-
-  background-color: blue;
 
   margin-left: 1rem;
   margin-right: 1rem;
@@ -518,8 +590,22 @@ main > section:nth-of-type(2) > section:first-of-type {
   margin-bottom: -0.25rem;
   width: 100%;
   overflow: hidden;
-  height: 200px;
+  height: 144px;
   background-color: red;
+  background-image: url("../images/bg-cloud-new.svg");
+  background-size: 200% auto;
+  background-position: left center;
+
+  animation: wolk 12s infinite linear;
+}
+
+@keyframes wolk {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
 }
 
 /*wolkjes zelf*/
@@ -550,7 +636,6 @@ main > section:nth-of-type(2) section {
 
 /*children*/
 main > section:nth-of-type(2) section > ul {
-  justify-content: center;
   align-items: center;
   font-family: "Montserrat";
 
@@ -589,6 +674,11 @@ main > section:nth-of-type(2) section > ul {
 }
 
 /*images*/
+main > section:nth-of-type(2) section > ul li {
+  width: 100%;
+  flex-shrink: 0;
+}
+
 main > section:nth-of-type(2) section > ul li img {
   display: block;
   border-radius: 0.5rem;
@@ -668,7 +758,7 @@ main > section:nth-of-type(3) {
   flex-direction: column;
   padding: 1.25rem;
 
-  background-image: url(/images/bg-news-mobile-03.png);
+  background-image: url("../images/bg-news-mobile-03.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -817,15 +907,16 @@ main > section:nth-of-type(3) > a:hover {
 main > section:nth-of-type(4)::after {
   content: "";
 
-  position: relative;
-  top: 3.5rem;
-  right: 0.8rem;
+  position: absolute;
+  top: calc(100% - 0.5px);
+  /* dan haalt het de gap weg :) */
+  right: 0;
+  left: 0;
   display: block;
 
-  width: 120%;
   aspect-ratio: 9/1;
 
-  background-image: url("/images/bg-wavy-purple-2.svg");
+  background-image: url("../images/bg-wavy-purple-2.svg");
   background-size: cover;
 
   /*source/credit: Sanne https://codepen.io/shooft/pen/GRPbwPO*/
@@ -981,6 +1072,7 @@ main > section:nth-of-type(5) {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }

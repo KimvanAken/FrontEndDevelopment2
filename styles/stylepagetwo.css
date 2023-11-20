@@ -1,0 +1,245 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "BurbankBig";
+  font-style: Bold;
+  font-weight: 700;
+  src: url(../fonts/Burbank-Big-Regular-Bold.ttf) format("truetype");
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* kleuren */
+  --color-black: #111;
+  --color-white: #ffffff;
+  --color-orange-outline: #ffc900;
+  --color-text-gradient-yellow: linear-gradient(
+    0.25turn,
+    #ffc500 0%,
+    #ff8100 100%
+  );
+  --color-drop-shadow-h2: #2669a4;
+  --color-drop-shadow-black: rgba(0, 0, 0, 0.36);
+  --color-drop-shadow-p-carrousel: #15436cc9;
+
+  --gradient-background-yellow: linear-gradient(#fef9c2 0%, #ffea6d 100%);
+  --gradient-background-black-purple: linear-gradient(#100e18 0%, #823797 100%);
+
+  --gradient-text-nav: linear-gradient(0.25turn, #8335eb 0%, #4b2b7e 100%);
+  --gradient-orange-button: linear-gradient(360deg, #ff7c00 0%, #ffca00 100%);
+  --gradient-button-hover: linear-gradient(180deg, #8235e9 0%, #4b2b7f 100%);
+  --gradient-button-black: linear-gradient(360deg, #000000 0%, #444444 100%);
+  --gradient-button-friends-and-foes-black: linear-gradient(
+    360deg,
+    #000000 0%,
+    #444444 100%
+  );
+  --gradient-button-friends-and-foes-purple: linear-gradient(
+    117.35deg,
+    #8f51b3 22.15%,
+    #dc94c1 95.43%
+  );
+
+  --gradient-socials-navbuttons: linear-gradient(180deg, #414141, #060606);
+
+  --gradient-square-paars: linear-gradient(80deg, #84549c 0%, #be7abc 100%);
+  --gradient-square-orange: linear-gradient(180deg, #ffc900 0%, #ff7f00 100%);
+  --gradient-square-green: linear-gradient(260deg, #42a01e 0%, #106816 100%);
+
+  --list-bullet-purple: #a453c9;
+}
+
+/* source: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
+/* source: Neopets.com */
+
+/****************/
+/*    M A I N	*/
+/****************/
+
+/*voor de elementen die ontzichtbaar moeten zijn maar nog wel leesbaar voor de screenreader*/
+/*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* dit laat ze wel zien als ze in focus zijn*/
+/*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/****************/
+/* HEADER EN NAV */
+/****************/
+
+/****************/
+/*    SECTION 1 */
+/****************/
+
+/*margins bij alle sections die niet 1 hele image zijn.*/
+body main > section:nth-of-type(2),
+body main > section:nth-of-type(4),
+body main > section:nth-of-type(6),
+body main > section:nth-of-type(8) {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  background-color: blue;
+}
+
+main > section > h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+
+  margin-top: 0;
+}
+
+main > section > ul {
+  list-style: none;
+}
+
+main > section > ul li {
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: list-item;
+  text-align: left;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 600;
+
+  list-style-position: outside;
+
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+}
+
+/* bullet popints bij list items editen*/
+main > section > ul li::before {
+  content: "\2B24";
+  color: var(--list-bullet-purple);
+  font-weight: bold;
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.2em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+  /*source/credit voor list styles: https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+}
+
+main > section > img {
+  width: 100%;
+  max-width: 400px;
+}

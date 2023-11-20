@@ -3,6 +3,25 @@ console.log("hi");
 
 // code credit naar sanne :) https://codepen.io/shooft/pen/mdBOZLz //
 
+/*********************/
+/* DE NAV INKLAPPEN */
+/*******************/
+
+var menuButton = document.querySelector("header section > button");
+var sideNav = document.querySelector("header > nav");
+
+menuButton.addEventListener("click", menuButtonKlik);
+
+function menuButtonKlik() {
+  menuButton.classList.toggle("menuOpen");
+  menuButton.classList.toggle("open");
+  sideNav.classList.toggle("open");
+  document.body.classList.toggle("open");
+}
+/*************************/
+/*      CARROUSEL      */
+/***********************/
+
 function createCaroCarrousel(carrouselNummer2) {
   let carrousel = document.querySelector("#" + carrouselNummer2);
   let carrouselElementsContainer = carrousel.querySelector(":scope > ul");
@@ -23,11 +42,11 @@ function createCaroCarrousel(carrouselNummer2) {
         e.preventDefault();
 
         // bepalen of er op 'previous' of 'next' geklikt is
-        let direction = this.getAttribute("button");
+        let direction = this.getAttribute("data-direction");
         // naar het element gaan
         goToElement(direction);
-        let carrousel = document.querySelector("#" + carrouselNummer2);
-        console.log("button check yo");
+        // let carrousel = document.querySelector("#" + carrouselNummer2);
+        // console.log("button check yo");
       });
     }
   }
