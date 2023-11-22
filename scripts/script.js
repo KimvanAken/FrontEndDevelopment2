@@ -3,6 +3,35 @@ console.log("hi");
 
 // code credit naar sanne :) https://codepen.io/shooft/pen/mdBOZLz //
 
+/*************************/
+/* SECTIONS NAAR BINNEN */
+/*    LATEN VLIEGEN    */
+/**********************/
+
+/* source/credit: Sanne https://codepen.io/shooft/pen/NWoYKZN */
+
+const sections = document.querySelectorAll("main > section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const intersecting = entry.isIntersecting;
+      if (intersecting) {
+        entry.target.classList.remove("ikBenAanHetWachten");
+      } else {
+        // entry.target.classList.add("ikBenAanHetWachten");
+      }
+
+      // entry.target.style.backgroundColor = intersecting ? "blue" : "orange"
+    });
+  },
+  { threshold: 0.3 }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
 /*********************/
 /* DE NAV INKLAPPEN */
 /*******************/

@@ -13,9 +13,13 @@ li {
   list-style: none;
 }
 p {
-  font-family: "Montserrat";
+  font-family: "Segoe UI", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+img {
+  max-width: 100%;
 }
 
 @font-face {
@@ -103,9 +107,15 @@ p {
 
 @font-face {
   font-family: "BurbankBig";
-  font-style: Bold;
   font-weight: 700;
   src: url(../fonts/Burbank-Big-Regular-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CafeteriaBlack";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/cafeteria-black.otf) format("opentype");
 }
 
 /*********************/
@@ -150,6 +160,12 @@ p {
   --gradient-square-green: linear-gradient(260deg, #42a01e 0%, #106816 100%);
 
   --list-bullet-purple: #a453c9;
+  --outline-h2-pg2: #8f4fdf;
+  --drop-shadow-titel-pagina2: #666;
+  --color-background-pagetwo-pink: #ffe8fd;
+  --color-background-pagetwo-purple: #464981;
+  --color-background-pagetwo-lightpurple: #d0c0de;
+  --gradient-button-pagetwo: linear-gradient(#f6e250, #ebb233);
 }
 
 /* source: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
@@ -162,7 +178,7 @@ p {
 /*voor de elementen die ontzichtbaar moeten zijn maar nog wel leesbaar voor de screenreader*/
 /*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
 .visually-hidden {
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -173,7 +189,7 @@ p {
 /* dit laat ze wel zien als ze in focus zijn*/
 /*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
 .visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -182,22 +198,105 @@ p {
   width: 1px;
 }
 
+main {
+  background-color: var(--color-background-pagetwo-pink);
+}
+
 /****************/
 /* HEADER EN NAV */
 /****************/
 
+body > header nav h2 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* container hele nav*/
+body > header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+
+  filter: drop-shadow(0px 9px 10px var(--drop-shadow-titel-pagina2));
+}
+
+/*logo*/
+body > header > section:first-of-type img {
+  max-width: 7.5rem;
+}
+
+body > header > nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+body > header > nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+body > header > nav ul li {
+  flex-shrink: 0;
+}
+
+body > header > nav ul li a {
+  display: block;
+  aspect-ratio: 1;
+  max-width: 1.8rem;
+}
+
+body > header > nav ul li a img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  /* source / credit image laten passen in nav: https://sentry.io/answers/how-do-i-auto-resize-an-image-to-fit-a-div-container/ */
+}
+
 /****************/
-/*    SECTION 1 */
-/****************/
+/*   afgesneden*/
+/*    images  */
+/*************/
+body main > section:nth-of-type(3) > img,
+body main > section:nth-of-type(5) > img {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  /*credit/source: https://bennettfeely.com/clippy/*/
+}
+
+/************************/
+/*    SECTIONS GENERAL */
+/**********************/
 
 /*margins bij alle sections die niet 1 hele image zijn.*/
 body main > section:nth-of-type(2),
 body main > section:nth-of-type(4),
 body main > section:nth-of-type(6),
 body main > section:nth-of-type(8) {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  background-color: blue;
+  position: relative;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 main > section > h2 {
@@ -208,6 +307,7 @@ main > section > h2 {
   line-height: 2.5rem;
 
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 main > section > ul {
@@ -228,7 +328,7 @@ main > section > ul li {
   margin-left: 1.25rem;
 }
 
-/* bullet popints bij list items editen*/
+/* bullet points bij list items editen*/
 main > section > ul li::before {
   content: "\2B24";
   color: var(--list-bullet-purple);
@@ -241,5 +341,333 @@ main > section > ul li::before {
 
 main > section > img {
   width: 100%;
-  max-width: 400px;
+}
+
+/****************/
+/*   SECTION 1 */
+/**************/
+
+main > section:first-of-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../images/pg2_top-banner-notext.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  /* credit: https://w3schools.com/cssref/pr_background-image.php */
+}
+
+/*download buttons*/
+main > section:first-of-type > section {
+  display: grid;
+  grid-template: auto / repeat(2, 50%);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 1rem;
+}
+
+/*h2 met ouline*/
+main > section:first-of-type h2 {
+  font-family: "CafeteriaBlack", "Arial Bold", sans-serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  text-align: center;
+
+  /* source/credit font border https://stackoverflow.com/questions/2570972/css-font-border */
+  background: var(--color-white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* source/credit: https://cssgradient.io/blog/css-gradient-text/ */
+  filter: drop-shadow(1px 1px 0 #8f4fdf)
+    drop-shadow(-1px 1px 0 var(--outline-h2-pg2))
+    drop-shadow(1px -1px 0 var(--outline-h2-pg2))
+    drop-shadow(-1px -1px 0 var(--outline-h2-pg2))
+    drop-shadow(1px 0 0 var(--outline-h2-pg2))
+    drop-shadow(0 2px 0 var(--outline-h2-pg2))
+    drop-shadow(0 1px 6px var(--drop-shadow-titel-pagina2));
+
+  margin-bottom: 1rem;
+}
+
+main > section:first-of-type > img:first-of-type {
+  margin: auto;
+  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  width: 60%;
+}
+
+/****************/
+/*   SECTION 2 */
+/**************/
+
+main > section:nth-of-type(2) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../images/pg2_bottom-bg-banner.png");
+  background-attachment: fixed;
+  /*credit/source background-attachment: https://www.w3schools.com/cssref/pr_background-attachment.php */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+
+  padding-top: 2rem;
+  /* credit: https://w3schools.com/cssref/pr_background-image.php */
+}
+
+main > section:nth-of-type(2) h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+main > section:nth-of-type(2) li {
+  margin-top: 1em;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+/****************/
+/*   SECTION 4 */
+/**************/
+main > section:nth-of-type(4) {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+main > section:nth-of-type(4) h2 {
+  margin-top: 0;
+  margin-right: 4em;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+main > section:nth-of-type(4) li {
+  margin-top: 1em;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+/****************/
+/*   SECTION 6 */
+/**************/
+
+main > section:nth-of-type(6) {
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+main > section:nth-of-type(6) h2 {
+  margin-top: 0;
+  margin-right: 4em;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+main > section:nth-of-type(6) li {
+  margin-top: 1em;
+  font-size: 1.7rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+/****************/
+/*   SECTION 7 */
+/**************/
+main > section:nth-of-type(7) {
+  background-color: var(--color-background-pagetwo-lightpurple);
+}
+
+main > section:nth-of-type(7) h2 {
+  font-family: "Montserrat";
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 3rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+}
+/* youtoube embed iframe*/
+/*source/credit responsiveness: https://stackoverflow.com/questions/15844500/shrink-a-youtube-video-to-responsive-width */
+
+/*container*/
+main > section:nth-of-type(7) > section {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+/*iframe/video zelf*/
+main > section:nth-of-type(7) > section iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/****************/
+/*   SECTION 8 */
+/**************/
+main > section:nth-of-type(8) {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-background-pagetwo-purple);
+}
+
+main > section:nth-of-type(8) > img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main > section:nth-of-type(8) h2 {
+  color: var(--color-white);
+
+  font-family: "Montserrat";
+  font-size: 2.3rem;
+  font-weight: bold;
+  line-height: 3rem;
+  text-align: center;
+  padding-bottom: 0;
+  padding-top: 1rem;
+}
+
+main > section:nth-of-type(8) p {
+  color: var(--color-white);
+
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: center;
+}
+
+/***********************/
+/* grote gele buttons */
+/*********************/
+main > section:nth-of-type(8) a {
+  text-decoration: none;
+  font-family: "CafeteriaBlack", "Arial Bold", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-black);
+
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  /* vertelt de browser dat die rekening moet houden met border + padding voor de breedte en hoogte van een element*/
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.7rem 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+
+  width: 90%;
+  max-width: 270px;
+  display: block;
+  margin: 1.5rem auto;
+
+  background: var(--gradient-button-pagetwo);
+  border: var(--color-white) solid 1px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 0px 1px rgba(246, 226, 80, 1),
+    /* Same as top of gradient */ inset 0px -3px 2px 3px rgba(196, 124, 25, 1),
+    /* Bottom Shadow */ inset 0px 2px 0px 1px rgba(253, 249, 220, 1),
+    /* Top Shine */ 0px 0px 0px 2px rgba(0, 0, 0, 1);
+  /*source: neopets website zelf*/
+  transition: 0.15s ease-out;
+}
+
+main > section:nth-of-type(8) a:hover {
+  filter: contrast(200%);
+  filter: brightness(60%);
+  filter: hue-rotate(-50deg);
+}
+
+/*DARKMODE!!!*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-pagetwo-pink: #251823;
+    --color-background-pagetwo-purple: #14163a;
+    --color-background-pagetwo-lightpurple: #1c1d2e;
+  }
+
+  /*header + nav */
+  body > header {
+    background-color: var(--color-black);
+  }
+  body > header h2 {
+    color: var(--color-white);
+  }
+  body > header nav img {
+    filter: invert(1);
+  }
+
+  /*section 1 */
+  main > section:first-of-type {
+    filter: brightness(0.85);
+  }
+
+  /*section 2 */
+  main > section:nth-of-type(2) {
+    background-image: url("../images/pg2_bottom-bg-banner-darkmode.png");
+  }
+  main > section:nth-of-type(2) h2,
+  main > section:nth-of-type(2) li {
+    color: var(--color-white);
+  }
+
+  /* section met alleen images */
+  main > section:nth-of-type(3),
+  main > section:nth-of-type(5) {
+    filter: brightness(0.85);
+  }
+
+  /*section 4 */
+  main > section:nth-of-type(4) h2,
+  main > section:nth-of-type(4) li {
+    color: var(--color-white);
+  }
+
+  /*section 6 */
+  main > section:nth-of-type(6) h2,
+  main > section:nth-of-type(6) li {
+    color: var(--color-white);
+  }
+  /*section 7 */
+  main > section:nth-of-type(7) h2 {
+    color: var(--color-white);
+  }
 }

@@ -112,7 +112,6 @@ html.menuOpen {
 
 @font-face {
   font-family: "BurbankBig";
-  font-style: Bold;
   font-weight: 700;
   src: url(../fonts/Burbank-Big-Regular-Bold.ttf) format("truetype");
 }
@@ -123,6 +122,7 @@ html.menuOpen {
 :root {
   /* kleuren */
   --color-black: #111;
+  --color-black-darkmode-lichter: #1f1f1f;
   --color-white: #ffffff;
   --color-orange-outline: #ffc900;
   --color-text-gradient-yellow: linear-gradient(
@@ -163,13 +163,13 @@ html.menuOpen {
 /* source: Neopets.com */
 
 /****************/
-/*    M A I N	*/
+/*    M A I N  	*/
 /****************/
 
 /*voor de elementen die ontzichtbaar moeten zijn maar nog wel leesbaar voor de screenreader*/
 /*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
 .visually-hidden {
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -180,7 +180,7 @@ html.menuOpen {
 /* dit laat ze wel zien als ze in focus zijn*/
 /*source/credit: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/ */
 .visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -193,6 +193,16 @@ html.menuOpen {
 ul {
   margin: 0;
   padding: 0;
+}
+
+/* section inlaad animaties */
+/* source/credit: Sanne https://codepen.io/shooft/pen/NWoYKZN */
+main > section {
+  transition-duration: 0.8s;
+}
+main > section.ikBenAanHetWachten {
+  translate: 0em 6em;
+  opacity: 0.1;
 }
 
 /****************/
@@ -296,52 +306,54 @@ header > section button {
   background-color: var(--color-black);
   border: none;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 /* span button lijntjes zelf*/
 header > section button span {
+  grid-column-start: 1;
+  grid-row-start: 1;
   width: 2.4rem;
   height: 0.3rem;
   display: block;
   background-color: var(--color-white);
   border-radius: 9999px;
+  transition-duration: 0.5s;
 }
 /*padding rechts voor wanneer de scrollbar verdwijnt*/
-header > button.open {
+header section > button.open {
   padding-right: 2em;
   padding-left: 2em;
   background-color: var(--color-black);
 }
 
 /*span 1 dicht*/
-header > button span:nth-of-type(1) {
-  transform: translateY(-0.4em);
+header section > button span:nth-of-type(1) {
+  transform: translateY(-1em);
 }
 
 /*span 2 staat al goed*/
 
 /*span 3 dicht */
-header > button span:nth-of-type(3) {
-  transform: translateY(0.4em);
+header section > button span:nth-of-type(3) {
+  transform: translateY(1em);
 }
 
 /*************/
 /*span 1 open*/
 /***********/
-header > button.menuOpen span:nth-of-type(1) {
-  transform: rotate(45deg) scalex(1.25);
-  filter: invert(100%);
+header section > button.open span:nth-of-type(1) {
+  transform: scale(1.25) rotate(45deg);
 }
 
 /*span 2 open*/
-header > button.menuOpen span:nth-of-type(2) {
+header section > button.menuOpen span:nth-of-type(2) {
   opacity: 0;
 }
 
 /*span 3 open*/
-header > button.menuOpen span:nth-of-type(3) {
-  transform: rotate(-45deg) scalex(1.25);
-  filter: invert(100%);
+header section > button.menuOpen span:nth-of-type(3) {
+  transform: scale(1.25) rotate(-45deg);
 }
 
 /********************/
@@ -379,10 +391,81 @@ h2 {
   text-align: center;
   font-size: 2rem;
 }
+/*sterretjes achter h2, behalve eerste section*/
+
+main > section:nth-of-type(2) h2::after {
+  content: "";
+  position: relative;
+  margin: 0 auto;
+  /* door de margin auto beweegt hij niet wanneer de pagina van grootte veranderd*/
+  margin-bottom: -84px;
+  /* er komt een margin onder de h2 op deze manier, daarom een ahcky manier om deze weg te halen:
+https://stackoverflow.com/questions/6040005/relatively-position-an-element-without-it-taking-up-space-in-document-flow */
+
+  bottom: 70px;
+  left: 90px;
+  /* pixels hier zodat ze static meebewegen*/
+  display: block;
+  height: auto;
+  width: 80px;
+  aspect-ratio: 350 / 283;
+
+  background-image: url("../images/title-stars.svg");
+  background-size: cover;
+  /*source/credit: https://codepen.io/shooft/pen/GRPbwPO (van Sanne)  */
+}
+main > section:nth-of-type(3) h2::after {
+  content: "";
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: -70px;
+  bottom: 70px;
+  right: 90px;
+  display: block;
+  height: auto;
+  width: 80px;
+  aspect-ratio: 350 / 283;
+  background-image: url("../images/title-stars.svg");
+  background-size: cover;
+}
+main > section:nth-of-type(4) h2::after {
+  content: "";
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: -64px;
+  bottom: 70px;
+  left: 120px;
+  display: block;
+  height: auto;
+  width: 80px;
+  aspect-ratio: 350 / 283;
+  background-image: url("../images/title-stars.svg");
+  background-size: cover;
+}
+main > section:nth-of-type(5) h2::after {
+  content: "";
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: -90px;
+
+  bottom: 65px;
+  left: 45px;
+  display: block;
+  height: auto;
+  width: 80px;
+  aspect-ratio: 350 / 283;
+  background-image: url("../images/title-stars.svg");
+  background-size: cover;
+}
 
 /*************************/
 /* SECTION 1 CARROUSEL  */
 /***********************/
+
+main > section:first-of-type {
+  position: relative;
+  z-index: 4;
+}
 
 main > section:first-of-type ul li {
   position: relative;
@@ -497,6 +580,7 @@ main > section:first-of-type ul li > section img {
   justify-content: center;
   align-items: center;
   object-fit: cover;
+  cursor: pointer;
 }
 
 /*andere h2's wit maken */
@@ -559,6 +643,7 @@ main > section:first-of-type > ul li a {
   border-width: 0.1875em;
   border-style: solid;
   border-radius: 9999px;
+
   /*source/credit: https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em*/
 }
 
@@ -567,14 +652,16 @@ main > section:first-of-type ul li a:hover {
 }
 
 /*************************/
-/* SECTION 2 CARROUSEL  */
+/*  SECTION 2 CARROUSEL */
 /***********************/
 main > section:nth-of-type(2) {
-  z-index: 4;
+  z-index: 8;
 
   position: relative;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 
   background-image: var(--gradient-background-yellow);
   background-repeat: no-repeat;
@@ -584,19 +671,48 @@ main > section:nth-of-type(2) {
   /* source/credit: https://w3schools.com/cssref/pr_background-image.php */
 }
 
-/*wolk-container*/
-main > section:nth-of-type(2) > section:first-of-type {
-  position: relative;
-  margin-bottom: -0.25rem;
-  width: 100%;
-  overflow: hidden;
-  height: 144px;
-  background-color: red;
-  background-image: url("../images/bg-cloud-new.svg");
-  background-size: 200% auto;
-  background-position: left center;
+main > section:nth-of-type(2) h2 {
+  margin-top: 0;
+}
 
-  animation: wolk 12s infinite linear;
+/* onderkant paintbrush */
+main > section:nth-of-type(2)::after {
+  content: "";
+
+  margin-top: -2rem;
+  position: absolute;
+  top: calc(100% - 0.5px);
+  /* dan haalt het de gap weg :) */
+  right: 0;
+  left: 0;
+  display: block;
+
+  aspect-ratio: 377/131;
+
+  background-image: url("../images/bg-news-mobile-03-top-border.png");
+  background-size: cover;
+
+  /*source/credit: Sanne https://codepen.io/shooft/pen/GRPbwPO*/
+}
+
+/*wolk-container*/
+main > section:nth-of-type(2)::before {
+  content: "";
+  height: 144px;
+  position: absolute;
+  bottom: calc(100% - 0.5px);
+  /* dan haalt het de gap weg :) */
+  right: 0;
+  left: 0;
+  display: block;
+
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url("../images/bg-cloud-new2.png");
+  background-size: cover;
+
+  animation: wolk 40s infinite linear;
+  /*source/credit: Sanne https://codepen.io/shooft/pen/GRPbwPO*/
 }
 
 @keyframes wolk {
@@ -605,22 +721,6 @@ main > section:nth-of-type(2) > section:first-of-type {
   }
   100% {
     background-position: right center;
-  }
-}
-
-/*wolkjes zelf*/
-main > section:nth-of-type(2) > section:first-of-type > img {
-  position: absolute;
-  top: 0;
-  width: 200%;
-  padding: 0;
-  height: 144px;
-  animation: wolkLinks 5s linear infinite;
-}
-
-@keyframes wolkLinks {
-  to {
-    transform: translate(-1440px);
   }
 }
 
@@ -696,6 +796,7 @@ main > section:nth-of-type(2) p {
   text-align: center;
   margin-top: 0.2rem;
   margin-bottom: 3rem;
+  font-size: 1.3rem;
 }
 
 /* buttons*/
@@ -719,14 +820,15 @@ main > section:nth-of-type(2) button {
 
 /*button andere kleur op hover*/
 main > section:nth-of-type(2) button img {
-  transition: 0.3s;
+  transition: 0.15s ease-out;
 }
 main > section:nth-of-type(2) button img:hover {
   filter: saturate(2.2);
   filter: hue-rotate(-60deg);
 }
 main > section:nth-of-type(2) button img:focus {
-  filter: brightness(-30);
+  filter: saturate(2.2);
+  filter: hue-rotate(-60deg);
 }
 
 /*button links*/
@@ -753,6 +855,7 @@ main > section:nth-of-type(2) > section:focus-within button:nth-of-type(2) {
 /*****************/
 
 main > section:nth-of-type(3) {
+  z-index: 2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -763,6 +866,40 @@ main > section:nth-of-type(3) {
   background-size: cover;
   width: 100%;
   height: auto;
+}
+
+main > section:nth-of-type(3)::after {
+  content: "";
+
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+
+  display: block;
+
+  width: 13em;
+  aspect-ratio: 415 / 448;
+
+  background-image: url("../images/character.png");
+  background-size: cover;
+}
+
+/* groene fairy image*/
+/*staat hier omdat de before en after van de section ervoor al in gebruik zijn*/
+main > section:nth-of-type(3) p::after {
+  content: "";
+
+  position: absolute;
+  top: 10em;
+  right: 0;
+
+  display: block;
+
+  width: 7.5em;
+  aspect-ratio: 233 / 304;
+
+  background-image: url("../images/event-fairy-2.png");
+  background-size: cover;
 }
 
 main > section:nth-of-type(3) > section {
@@ -779,6 +916,7 @@ main > section:nth-of-type(3) > section {
   filter: drop-shadow(0.35rem 0.35rem 0px var(--color-drop-shadow-black));
 
   padding: 1.5rem 1.25rem;
+  transition: 0.15s ease-out;
 }
 main > section:nth-of-type(3) > section:hover {
   outline-style: solid;
@@ -862,6 +1000,7 @@ main > section:nth-of-type(3) > p {
   color: var(--color-white);
   text-align: left;
   margin-top: 0;
+  font-size: 1.3rem;
 }
 
 /*button*/
@@ -892,9 +1031,14 @@ main > section:nth-of-type(3) > a {
   border-color: var(--color-white);
 
   align-items: flex-start;
+  transition: 0.15s ease-out;
 }
 
 main > section:nth-of-type(3) > a:hover {
+  background: var(--gradient-orange-button);
+}
+
+main > section:nth-of-type(3) > a:focus {
   background: var(--gradient-orange-button);
 }
 
@@ -902,6 +1046,25 @@ main > section:nth-of-type(3) > a:hover {
 /*  GRID SECTION 4 */
 /*  MET CHARACTERS*/
 /*****************/
+
+/* bovenkant */
+main > section:nth-of-type(4)::before {
+  content: "";
+
+  position: absolute;
+  bottom: calc(100% - 0.5px);
+  /* dan haalt het de gap weg :) */
+  right: 0;
+  left: 0;
+  display: block;
+
+  aspect-ratio: 754/79;
+
+  background-image: url("../images/bg-news-mobile-03-bottom-border.png");
+  background-size: cover;
+
+  /*source/credit: Sanne https://codepen.io/shooft/pen/GRPbwPO*/
+}
 
 /* paarse onderkant*/
 main > section:nth-of-type(4)::after {
@@ -921,9 +1084,9 @@ main > section:nth-of-type(4)::after {
 
   /*source/credit: Sanne https://codepen.io/shooft/pen/GRPbwPO*/
 }
-
 main > section:nth-of-type(4) {
   position: relative;
+  z-index: 3;
   background-image: var(--gradient-background-black-purple);
   padding-left: 1rem;
   padding-right: 1rem;
@@ -948,6 +1111,7 @@ main > section:nth-of-type(4) > p {
   color: var(--color-white);
   text-align: center;
   margin-top: 0;
+  font-size: 1.3rem;
 }
 
 /*button grid*/
@@ -961,7 +1125,7 @@ main > section:nth-of-type(4) > ul:first-of-type {
 }
 
 /*zwarte buttons*/
-main > section:nth-of-type(4) ul > button {
+main > section:nth-of-type(4) ul > li button {
   font-family: BurbankBig, Helvetica, Arial, sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -982,12 +1146,16 @@ main > section:nth-of-type(4) ul > button {
   text-transform: capitalize;
 
   opacity: 0.5;
+  transition: 0.15s ease-out;
 }
-main > section:nth-of-type(4) ul > button:hover {
+main > section:nth-of-type(4) ul > li button:hover {
+  opacity: 1;
+}
+main > section:nth-of-type(4) ul > li button:focus {
   opacity: 1;
 }
 /*eerste paarse button*/
-main > section:nth-of-type(4) ul > button:first-of-type {
+main > section:nth-of-type(4) ul > li:first-of-type button {
   background: var(--gradient-button-friends-and-foes-purple);
   opacity: 1;
 }
@@ -1020,13 +1188,13 @@ main > section:nth-of-type(4) > ul li img {
 }
 
 /* IDS omdat er zoveel van deze blokjes zijn met de achtergronden!!!*/
-#heroBlock {
+.heroBlock {
   background: var(--gradient-square-orange);
 }
-#faerieBlock {
+.faerieBlock {
   background: var(--gradient-square-paars);
 }
-#villainBlock {
+.villainBlock {
   background: var(--gradient-square-green);
 }
 
@@ -1057,12 +1225,15 @@ main > section:nth-of-type(4) > a {
   border-color: var(--color-white);
 
   align-items: flex-start;
+  transition: 0.15s ease-out;
 }
 
 main > section:nth-of-type(4) > a:hover {
   background: var(--gradient-orange-button);
 }
-
+main > section:nth-of-type(4) > a:focus {
+  background: var(--gradient-orange-button);
+}
 /********************/
 /*   GRID SECTION  */
 /*      MERCH     */
@@ -1072,14 +1243,35 @@ main > section:nth-of-type(5) {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+main > section:nth-of-type(5) h2 {
+  margin-top: 3rem;
+}
+
+/*after van de character omdat de before en after van de section al gebruikt zijn*/
+main > section:nth-of-type(5) h2::before {
+  content: "";
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 5em;
+  aspect-ratio: 253 / 246;
+
+  background-image: url("../images/shop_wizard.png");
+  background-size: cover;
 }
 
 main > section:nth-of-type(5) > p {
   text-align: center;
   margin-top: 0;
+  font-size: 1.3rem;
 }
 
 /*grid op items*/
@@ -1103,7 +1295,7 @@ main > section:nth-of-type(5) > section article {
   grid-template-rows: repeat(4, 1fr);
   gap: 0.25rem;
 
-  transition: 0.1s ease-in;
+  transition: 0.15s ease-out;
 }
 
 main > section:nth-of-type(5) > section article:hover {
@@ -1168,4 +1360,64 @@ main > section:nth-of-type(5) > a {
 
 main > section:nth-of-type(5) > a:hover {
   background: var(--gradient-orange-button);
+}
+
+main > section:nth-of-type(5) > a:focus {
+  background: var(--gradient-orange-button);
+}
+
+/*********************/
+/* CUSTOM PROPERTIES*/
+/*     DARKMODE    */
+/******************/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gradient-background-yellow: linear-gradient(
+      #245c57 0%,
+      rgb(5, 4, 59) 100%
+    );
+  }
+  /*section 1*/
+  main > section:first-of-type {
+    filter: brightness(0.97);
+  }
+
+  /*section 2 clouds*/
+  main > section:nth-of-type(2)::before {
+    background-image: url("../images/bg-cloud-new2-darkmode.png");
+  }
+
+  /*section 2 clouds*/
+  main > section:nth-of-type(2) h2,
+  main > section:nth-of-type(2) p {
+    color: var(--color-white);
+  }
+
+  /*section 5 merch*/
+  main > section:nth-of-type(5) p,
+  main > section:nth-of-type(5) h2 {
+    color: var(--color-white);
+  }
+  main > section:nth-of-type(5) {
+    background-color: var(--color-black);
+  }
+
+  main > section:nth-of-type(5) > section article {
+    background-color: var(--color-black-darkmode-lichter);
+  }
+
+  main > section:nth-of-type(5) > section article h3,
+  main > section:nth-of-type(5) > section article p {
+    color: var(--color-white);
+  }
+
+  /*section3*/
+  main > section:nth-of-type(3) > section {
+    background-color: var(--color-black);
+  }
+  /*tekst wit maken*/
+  main > section:nth-of-type(3) > section h3,
+  main > section:nth-of-type(3) > section time {
+    color: var(--color-white);
+  }
 }

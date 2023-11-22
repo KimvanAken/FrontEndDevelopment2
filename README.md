@@ -350,9 +350,7 @@ Bij Luuk Brauckmann of Quinesha van Burgh! (s)
 
 ### Dit ging goed/Heb ik geleerd:
 
-Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+Ik heb best een pittige website gekozen en toch voelt het wel mogelijk.
 
 ### Dit was lastig/Is niet gelukt:
 
@@ -361,14 +359,60 @@ Javascript! Ik heb geprobeerd bepaalde elementen te implementeren zoals de carro
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
+## Herkansing
+
+<details>
+  <summary>Voor de herkansing uitgewerkt</summary>
+
+Toegepaste Surface Plane Elementen:
+
+- Dark / Lightmode
+- Formulieren
+- Advanced Positioning
+  (geprobeert:) Scroll animaties
+
+### Je uitkomst - karakteristiek screenshots:
+
+Pagina 1 Licht en Dark:
+<img src="readme-images/page1-final-lightmode.png" width="375px" alt="Pagina 1 Lichte Modus">
+<img src="readme-images/page1-final-darkmode.png" width="375px" alt="Pagina 1 Donkere Modus">
+Nav:
+<img src="readme-images/navmenu-final-uitgeklapt.jpg" width="375px" alt="navmenu wanneer uitgeklapt">
+
+Pagina 2 Licht en Dark:
+<img src="readme-images/page2-final-lightmode.png" width="375px" alt="Pagina 2 Lichte Modus">
+<img src="readme-images/page2-final-darkmode.png" width="375px" alt="Pagina 2 Donkere Modus">
+
+Voor de herkansing heb ik nog bepaalde onderwerpen met Sanne besproken.
+
+De opgeloste problemen:
+
+- navbutton animatie
+- cloudbanner verdubbeling weggehaalt
+- inladen wanneer scrollen voorgedaan, alleen lukte het toepassen niet alleen
+- navicons passend gemaakt op pagina 2
+
+Verder heb ik zelf nog deze problemen opgelost:
+
+- darkmode toegevoegd
+- heel pagina 2 afgemaakt
+- font groottes aangepast
+- Alt tekst toegevoegd voor elke image
+- errors in HTML en css weggewerkt
+- alle bronnen toegevoegd
+- Alle afters toegevoegd bij de titels en sections van de pagina's
+
+Wat lukte niet?
+
+- Inladen met scrollen
+- eerste carroussel toevoegen
+- Kwast onderkant decoratietoegepast maken bij section 2
+- alle states voor elke buttons
+
 ## Bronnenlijst
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-Nb. ChatGpT en andere AI horen er ook bij.
-Nb. Vermeld de bronnen ook in je code.
 
 1. Linear-gradient: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
 2. .visually-hidden class en implementatie: https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/
@@ -379,11 +423,21 @@ Nb. Vermeld de bronnen ook in je code.
 7. border-radius in niet-pixels: https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em*/
 8. gradient-background-image: https://w3schools.com/cssref/pr_background-image.php
 9. Bewegende cloud banner in section 2: Vriend die Todd heet
-10. Mislukte carrousel (door mij): Van Sanne https://codepen.io/shooft/pen/mdBOZLz
+10. Carrousel (door mij): Van Sanne https://codepen.io/shooft/pen/mdBOZLz
 11. button styling weghalen: https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit
 12. flex-items niet te lang maken: https://stackoverflow.com/questions/33887051/prevent-flex-items-from-stretching
 13. Tekst van button op 1 line houden ipv 2: https://stackoverflow.com/questions/5232310/how-can-i-force-div-contents-to-stay-in-one-line-with-html-and-css
 14. grid-row: span 2: https://stackoverflow.com/questions/53199146/make-element-take-two-columns*
 15. Image als achtergrond bij section 1: https://w3schools.com/cssref/pr_background-image.php
+16. embedden van Youtube, accesible: https://www.200ok.nl/tips/youtube-embed/
+17. List style bullets veranderen: https://www.w3schools.com/howto/howto_css_bullet_color.asp
+18. Aspect ratio calculator voor before en afters: https://andrew.hedges.name/experiments/aspect_ratio/ aspect ratio calculator
+19. Images afsnijden met clippy: https://bennettfeely.com/clippy/
+20. px naar rem converter: https://nekocalc.com/px-to-rem-converter
+21. object-fit: contain in de nav pagina 2: https://sentry.io/answers/how-do-i-auto-resize-an-image-to-fit-a-div-container/
+22. background-image op sections: https://w3schools.com/cssref/pr_background-image.php
+23. background-attachment: (achtergrond niet laten bewegen section 1 pagina 2): https://www.w3schools.com/cssref/pr_background-attachment.php
+24. youtube video responsive laten scalen: https://stackoverflow.com/questions/15844500/shrink-a-youtube-video-to-responsive-width /
+25. section laten invliegen (alleen niet gelukt) van Sanne: https://codepen.io/shooft/pen/NWoYKZN
 
  </details>

@@ -11,11 +11,11 @@ body {
   margin: 0;
 }
 
-li {
+footer li {
   list-style: none;
 }
 
-p {
+footer p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -109,7 +109,6 @@ p {
 
 @font-face {
   font-family: "BurbankBig";
-  font-style: Bold;
   font-weight: 700;
   src: url(../fonts/Burbank-Big-Regular-Bold.ttf) format("truetype");
 }
@@ -123,7 +122,9 @@ p {
   --footer-white: #fff;
   --footer-link-grey: #8f8f8f;
   --footer-1px-line: #313131;
+  --footer-submit-button: #fdcb46;
   --gradient-email-form: linear-gradient(180deg, #fdcb46 0%, #fc7e23 100%);
+  --submit-button-hover: rgb(253, 107, 70);
 }
 
 /******************/
@@ -131,9 +132,27 @@ p {
 /****************/
 
 footer {
+  position: relative;
+  z-index: 8;
   background-color: var(--footer-black);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+footer::before {
+  content: "";
+
+  position: absolute;
+  bottom: calc(100% - 0.5px);
+  /* dan haalt het de gap weg :) */
+  right: 0;
+  left: 0;
+  display: block;
+
+  aspect-ratio: 9/1;
+
+  background-image: url("../images/border-footer.svg");
+  background-size: cover;
 }
 
 footer h2 {
@@ -148,15 +167,15 @@ footer h2 {
 
 footer h2::after {
   content: "";
-
-  position: absolute;
-  top: -1rem;
-  right: 3rem;
-
+  position: relative;
+  margin: 0 auto;
+  bottom: 74px;
+  left: 128px;
+  /* pixels hier zodat ze static meebewegen*/
   display: block;
-
-  width: 150px;
-  aspect-ratio: 1;
+  height: auto;
+  width: 80px;
+  aspect-ratio: 350 / 283;
 
   background-image: url("../images/title-stars.svg");
   background-size: cover;
@@ -167,6 +186,7 @@ footer h3 {
   font-family: "BurbankBig";
   font-weight: 600;
   text-align: center;
+
   font-size: 1rem;
   margin-bottom: 1rem;
   color: var(--footer-white);
@@ -206,7 +226,7 @@ footer > section:first-of-type {
   text-align: center;
 
   padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding-top: 0.5rem;
   border-bottom: solid 1px var(--footer-1px-line);
 }
 
@@ -278,7 +298,23 @@ footer form:focus {
 /*   border etc  */
 
 footer input[type="submit"] {
-  background-color: #fdcb46;
+  color: var(--footer-black);
+  /* is wit in het origineel, maar vind zwart beter te zien*/
+  background-color: var(--footer-submit-button);
+  border-style: none;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  transition: 0.15s ease-out;
+}
+
+footer input[type="submit"]:hover {
+  background-color: var(--submit-button-hover);
+}
+
+footer input[type="submit"]:focus {
+  background-color: var(--submit-button-hover);
+  filter: contrast(200%);
+  filter: brightness(60%);
 }
 
 /******************/
